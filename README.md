@@ -11,4 +11,5 @@
 
 ## Dockerizing the application
 - [ ] Create dockerfile for each service
+- [ ] Create docker compose for microservices stack
 
