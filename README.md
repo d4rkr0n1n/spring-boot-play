@@ -27,11 +27,11 @@ flowchart LR
 ```
 
 ## Creating Microservices Skeleton
-- [x] Simple Hello World API - 15/10/2024
-- [x] Add GitHub Actions for build and test - 15/10/2024
-- [x] Add Architecture diagram
-- [x] Skeleton CRUD API
-- [x] Spring JPA Data
+- [x] Simple Hello World API - 15/Oct/2024
+- [x] Add GitHub Actions for build and test - 15/Oct/2024
+- [x] Add Architecture diagram - 16/Oct/2024
+- [x] Skeleton CRUD API - 17/Oct/2024
+- [x] Spring JPA Data - 18/Oct/2024
 - [ ] CRUD API
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
