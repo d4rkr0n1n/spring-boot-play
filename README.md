@@ -30,7 +30,8 @@ flowchart LR
 - [x] Simple Hello World API - 15/10/2024
 - [x] Add GitHub Actions for build and test - 15/10/2024
 - [x] Add Architecture diagram
-- [ ] CRUD API for Users Spring JPA Data
+- [x] Skeleton CRUD API
+- [ ] CRUD API + Spring JPA Data
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
 - [ ] Add API Gateway
