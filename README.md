@@ -31,7 +31,8 @@ flowchart LR
 - [x] Add GitHub Actions for build and test - 15/10/2024
 - [x] Add Architecture diagram
 - [x] Skeleton CRUD API
-- [ ] CRUD API + Spring JPA Data
+- [x] Spring JPA Data
+- [ ] CRUD API
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
 - [ ] Add API Gateway
