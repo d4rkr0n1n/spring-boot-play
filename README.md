@@ -33,6 +33,7 @@ flowchart LR
 - [x] Skeleton CRUD API - 17/Oct/2024
 - [x] Spring JPA Data - 18/Oct/2024
 - [x] CRUD API | Part 1 - 19/Oct/2024
+- [x] CRUD API | Part 2: Updated delete method CRUD function - 20/Oct/2024
 - [ ] CRUD API
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
