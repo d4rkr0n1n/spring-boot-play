@@ -43,8 +43,16 @@ public class SampleController {
     }
 
     @PutMapping("/put")
-    public String put() {
-        return "put";
+    public String put(@RequestParam UUID id,@RequestParam String updatedName) {
+        Optional<Notes> noteId = sampleRepository.findById(id);
+        if (noteId.isPresent()) {
+            Notes note = noteId.get();
+            note.setName(updatedName);
+            sampleRepository.save(note);
+            return "Note Updated !!";
+        } else {
+            return "Note Not Found !!";
+        }
     }
 
     @DeleteMapping("/delete")
