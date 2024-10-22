@@ -1,7 +1,6 @@
 package io.d4rkr0n1n.sample;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -19,19 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class SampleController {
 
     private final SampleRepository sampleRepository;
+    private final NotesService notesService;
 
-    public SampleController(SampleRepository sampleRepository) {
+    public SampleController(SampleRepository sampleRepository,NotesService notesService) {
         this.sampleRepository = sampleRepository;
-    }
-
-    @GetMapping("/hello")
-    public String helloWorld() {
-        return "Hello There";
-    }
-
-    @GetMapping("/get")
-    public List<Notes> get() {
-        return (ArrayList<Notes>) sampleRepository.findAll();
+        this.notesService = notesService;
     }
 
     @PostMapping("/post")
@@ -40,6 +31,11 @@ public class SampleController {
         Notes notes = new Notes(UUID.randomUUID(), "Note_" + timestamp);
         sampleRepository.save(notes);
         return "post";
+    }
+
+    @GetMapping("/get")
+    public List<Notes> get() {
+        return notesService.retrieveAllNotes();
     }
 
     @PutMapping("/put")
