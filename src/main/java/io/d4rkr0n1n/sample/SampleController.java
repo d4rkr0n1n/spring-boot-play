@@ -1,6 +1,5 @@
 package io.d4rkr0n1n.sample;
 
-import java.sql.Timestamp;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -27,10 +26,7 @@ public class SampleController {
 
     @PostMapping("/post")
     public String post() {
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        Notes notes = new Notes(UUID.randomUUID(), "Note_" + timestamp);
-        sampleRepository.save(notes);
-        return "post";
+        return notesService.createNotes();
     }
 
     @GetMapping("/get")
