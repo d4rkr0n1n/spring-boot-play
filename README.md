@@ -37,6 +37,7 @@ flowchart LR
 - [x] CRUD API | Part 3: Updated put method CRUD function - 21/Oct/2024
 - [x] Business Logic Service | Part 1 - 22/10/2024
 - [x] Business Logic Service | Part 2 - 23/10/2024
+- [x] Business Logic Service | Part 3 - 24/10/2024
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
 - [ ] Add API Gateway
