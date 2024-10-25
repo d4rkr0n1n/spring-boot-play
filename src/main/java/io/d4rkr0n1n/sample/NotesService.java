@@ -31,12 +31,22 @@ public class NotesService {
   public String updateNotes(UUID id, String updatedName) {
     Optional<Notes> noteId = notesRepository.findById(id);
     if (noteId.isPresent()) {
-        Notes note = noteId.get();
-        note.setName(updatedName);
-        notesRepository.save(note);
-        return "Note Updated !!";
+      Notes note = noteId.get();
+      note.setName(updatedName);
+      notesRepository.save(note);
+      return "Note Updated !!";
     } else {
-        return "Note Not Found !!";
+      return "Note Not Found !!";
     }
-}
+  }
+
+  public String deleteNotes(UUID id) {
+    Optional<Notes> noteId = notesRepository.findById(id);
+    if (noteId.isPresent()) {
+      notesRepository.delete(noteId.get());
+      return "Note Deleted !!";
+    } else {
+      return "Note Not Found !!";
+    }
+  }
 }

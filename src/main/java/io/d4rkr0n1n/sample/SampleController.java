@@ -1,7 +1,6 @@
 package io.d4rkr0n1n.sample;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,11 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1")
 public class SampleController {
 
-    private final SampleRepository sampleRepository;
     private final NotesService notesService;
 
-    public SampleController(SampleRepository sampleRepository,NotesService notesService) {
-        this.sampleRepository = sampleRepository;
+    public SampleController(NotesService notesService) {
         this.notesService = notesService;
     }
 
@@ -35,19 +32,13 @@ public class SampleController {
     }
 
     @PutMapping("/put")
-    public String put(@RequestParam UUID id,@RequestParam String updatedName) {
+    public String put(@RequestParam UUID id, @RequestParam String updatedName) {
         return notesService.updateNotes(id, updatedName);
     }
 
     @DeleteMapping("/delete")
     public String delete(@RequestParam UUID id) {
-        Optional<Notes> noteId = sampleRepository.findById(id);
-        if (noteId.isPresent()) {
-            sampleRepository.delete(noteId.get());
-            return "Note Deleted !!";
-        } else {
-            return "Note Not Found !!";
-        }
+        return notesService.deleteNotes(id);
     }
 
 }
