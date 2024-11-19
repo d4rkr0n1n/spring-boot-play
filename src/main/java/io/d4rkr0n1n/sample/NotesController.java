@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1")
-public class SampleController {
+public class NotesController {
 
     private final NotesService notesService;
 
-    public SampleController(NotesService notesService) {
+    public NotesController(NotesService notesService) {
         this.notesService = notesService;
     }
 
