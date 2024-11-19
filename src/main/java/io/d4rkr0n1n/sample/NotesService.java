@@ -29,24 +29,34 @@ public class NotesService {
   }
 
   public String updateNotes(UUID id, String updatedName) {
-    Optional<Notes> noteId = notesRepository.findById(id);
+
+    Optional<Notes> noteId = findNoteById(id);
+    String status = "Note Not Found !!";
+
     if (noteId.isPresent()) {
       Notes note = noteId.get();
       note.setName(updatedName);
       notesRepository.save(note);
-      return "Note Updated !!";
-    } else {
-      return "Note Not Found !!";
+      status = "Note Updated !!";
     }
+
+    return status;
   }
 
   public String deleteNotes(UUID id) {
-    Optional<Notes> noteId = notesRepository.findById(id);
-    if (noteId.isPresent()) {
+
+    Optional<Notes> noteId = findNoteById(id);
+    String status = "Note Not Found !!";
+    
+    if (findNoteById(id).isPresent()) {
       notesRepository.delete(noteId.get());
-      return "Note Deleted !!";
-    } else {
-      return "Note Not Found !!";
+      status = "Note Deleted !!";
     }
+
+    return status;
+  }
+
+  private Optional<Notes> findNoteById(UUID id) {
+    return notesRepository.findById(id);
   }
 }
