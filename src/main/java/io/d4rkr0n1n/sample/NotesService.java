@@ -8,6 +8,8 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import io.d4rkr0n1n.sample.utils.TimeUtils;
+
 @Service
 public class NotesService {
 
@@ -22,9 +24,9 @@ public class NotesService {
   }
 
   public String createNotes() {
-    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+    Timestamp timestamp = TimeUtils.getCurrentTime();
     Notes notes = new Notes(UUID.randomUUID(), "Note_" + timestamp);
-    notesRepository.save(notes);
+    saveNote(notes);
     return "Random Note created !!";
   }
 
@@ -36,15 +38,15 @@ public class NotesService {
     if (noteId.isPresent()) {
       Notes note = noteId.get();
       note.setName(updatedName);
-      notesRepository.save(note);
+      saveNote(note);
       status = "Note Updated !!";
     }
 
     return status;
   }
-
+  
   public String deleteNotes(UUID id) {
-
+    
     Optional<Notes> noteId = findNoteById(id);
     String status = "Note Not Found !!";
     
@@ -52,8 +54,12 @@ public class NotesService {
       notesRepository.delete(noteId.get());
       status = "Note Deleted !!";
     }
-
+    
     return status;
+  }
+
+  private void saveNote(Notes note) {
+    notesRepository.save(note);
   }
 
   private Optional<Notes> findNoteById(UUID id) {
