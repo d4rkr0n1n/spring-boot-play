@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample;
+package io.d4rkr0n1n.sample.service;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -8,6 +8,8 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import io.d4rkr0n1n.sample.model.Notes;
+import io.d4rkr0n1n.sample.repository.NotesRepository;
 import io.d4rkr0n1n.sample.utils.TimeUtils;
 
 @Service

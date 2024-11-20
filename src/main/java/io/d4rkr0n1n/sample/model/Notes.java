@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample;
+package io.d4rkr0n1n.sample.model;
 
 import java.util.UUID;
 

@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample;
+package io.d4rkr0n1n.sample.controller;
 
 import java.util.List;
 import java.util.UUID;
@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import io.d4rkr0n1n.sample.model.Notes;
+import io.d4rkr0n1n.sample.service.NotesService;
 
 @RestController
 @RequestMapping("/api/v1")
