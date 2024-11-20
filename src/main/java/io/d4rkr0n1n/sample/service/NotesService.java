@@ -40,11 +40,11 @@ public class NotesService {
     return notes;
   }
 
-  public String createNotes() {
+  public ResponseEntity<Note> createNotes() {
     Timestamp timestamp = TimeUtils.getCurrentTime();
     Note notes = new Note(UUID.randomUUID(), "Note_" + timestamp, "Random Note", timestamp);
     saveNote(notes);
-    return "Random Note created !!";
+    return ResponseHelper.created(notes);
   }
 
   public String updateNotes(UUID id, String updatedName) {

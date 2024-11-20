@@ -26,7 +26,7 @@ public class NotesController {
     }
 
     @PostMapping("/post")
-    public String post() {
+    public ResponseEntity<Note> post() {
         return notesService.createNotes();
     }
 
