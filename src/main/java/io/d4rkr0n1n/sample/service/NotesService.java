@@ -47,6 +47,16 @@ public class NotesService {
     return ResponseHelper.created(notes);
   }
 
+  public ResponseEntity<Note> retrieveNote(UUID id) {
+    Optional<Note> noteId = findNoteById(id);
+
+    if (findNoteById(id).isPresent()) {
+      return ResponseHelper.ok(noteId.get());
+    } else {
+      return ResponseHelper.notFound();
+    }
+  }
+
   public ResponseEntity<Note> updateNote(UUID id, String updatedName) {
 
     Optional<Note> noteId = findNoteById(id);
@@ -83,13 +93,4 @@ public class NotesService {
     return notesRepository.findById(id);
   }
 
-  public ResponseEntity<Note> retrieveNote(UUID id) {
-    Optional<Note> noteId = findNoteById(id);
-
-    if (findNoteById(id).isPresent()) {
-      return ResponseHelper.ok(noteId.get());
-    } else {
-      return ResponseHelper.notFound();
-    }
-  }
 }
