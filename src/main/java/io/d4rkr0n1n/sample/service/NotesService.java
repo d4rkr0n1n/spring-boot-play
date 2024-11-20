@@ -27,7 +27,7 @@ public class NotesService {
     this.notesRepository = sampleRepository;
   }
 
-  public List<Note> retrieveAllNotes() {
+  public ResponseEntity<List<Note>> retrieveAllNotes() {
     List<Note> notes = (ArrayList<Note>) notesRepository.findAll();
     for (Note x : notes) {
       log.info(Long.toString(x.getTimestamp().getTime()));
@@ -37,7 +37,7 @@ public class NotesService {
       log.info(Long.toString(x.getTimestamp().getTime()));
       log.info(time.toString());
     }
-    return notes;
+    return ResponseHelper.ok(notes);
   }
 
   public ResponseEntity<Note> createNotes() {
@@ -47,29 +47,29 @@ public class NotesService {
     return ResponseHelper.created(notes);
   }
 
-  public String updateNotes(UUID id, String updatedName) {
+  public ResponseEntity<Note> updateNote(UUID id, String updatedName) {
 
     Optional<Note> noteId = findNoteById(id);
-    String status = "Note Not Found !!";
+    ResponseEntity<Note> status = ResponseHelper.notFound();
 
     if (noteId.isPresent()) {
       Note note = noteId.get();
       note.setName(updatedName);
       saveNote(note);
-      status = "Note Updated !!";
+      status = ResponseHelper.ok(note);
     }
 
     return status;
   }
 
-  public String deleteNotes(UUID id) {
+  public ResponseEntity<Note> deleteNote(UUID id) {
 
     Optional<Note> noteId = findNoteById(id);
-    String status = "Note Not Found !!";
+    ResponseEntity<Note> status = ResponseHelper.notFound();
 
     if (findNoteById(id).isPresent()) {
       notesRepository.delete(noteId.get());
-      status = "Note Deleted !!";
+      status = ResponseHelper.ok();
     }
 
     return status;

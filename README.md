@@ -25,8 +25,7 @@ flowchart LR
     API <--> DB
     World["World"] <--> APIGateway
 ```
-
-## Creating Microservices Skeleton
+### Done
 - [x] Simple Hello World API
 - [x] Add GitHub Actions for build and test
 - [x] Add Architecture diagram
@@ -34,12 +33,18 @@ flowchart LR
 - [x] Spring JPA Data
 - [x] CRUD API
 - [x] Business Logic Service
-- [ ] Improve Logic Service
+- [x] Add ResponseEntity
+
+### Work in Progress
+- [ ] Refactor PutMapping Function
+- [ ] Refactor Service Class
+
+## Future Plans
+### Prerequisites
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
 - [ ] Add API Gateway
 - [ ] Add Frontend Microservice
-
-## Dockerizing the application
+### Dockerizing the application
 - [ ] Create dockerfile for each service
 - [ ] Create docker compose for microservices stack

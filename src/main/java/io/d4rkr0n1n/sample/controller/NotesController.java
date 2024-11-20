@@ -25,14 +25,14 @@ public class NotesController {
         this.notesService = notesService;
     }
 
-    @PostMapping("/post")
-    public ResponseEntity<Note> post() {
-        return notesService.createNotes();
+    @GetMapping("/notes")
+    public ResponseEntity<List<Note>> getAllNotes() {
+        return notesService.retrieveAllNotes();
     }
 
-    @GetMapping("/notes")
-    public List<Note> getAllNotes() {
-        return notesService.retrieveAllNotes();
+    @PostMapping("/note")
+    public ResponseEntity<Note> post() {
+        return notesService.createNotes();
     }
 
     @GetMapping("/note")
@@ -40,14 +40,14 @@ public class NotesController {
         return notesService.retrieveNote(id);
     }
 
-    @PutMapping("/put")
-    public String put(@RequestParam UUID id, @RequestParam String updatedName) {
-        return notesService.updateNotes(id, updatedName);
+    @PutMapping("/note")
+    public ResponseEntity<Note> put(@RequestParam UUID id, @RequestParam String updatedName) {
+        return notesService.updateNote(id, updatedName);
     }
 
-    @DeleteMapping("/delete")
-    public String delete(@RequestParam UUID id) {
-        return notesService.deleteNotes(id);
+    @DeleteMapping("/note")
+    public ResponseEntity<Note> delete(@RequestParam UUID id) {
+        return notesService.deleteNote(id);
     }
 
 }

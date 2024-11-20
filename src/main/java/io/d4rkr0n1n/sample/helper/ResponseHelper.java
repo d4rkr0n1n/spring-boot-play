@@ -12,6 +12,10 @@ public class ResponseHelper {
     return ResponseEntity.status(HttpStatus.OK).body(body);
   }
 
+  public static <T> ResponseEntity<T> ok() {
+    return ResponseEntity.status(HttpStatus.OK).build();
+  }
+
   public static <T> ResponseEntity<T> created(T body) {
     return ResponseEntity.status(HttpStatus.CREATED).body(body);
   }
