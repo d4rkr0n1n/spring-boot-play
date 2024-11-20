@@ -27,17 +27,14 @@ flowchart LR
 ```
 
 ## Creating Microservices Skeleton
-- [x] Simple Hello World API - 15/Oct/2024
-- [x] Add GitHub Actions for build and test - 15/Oct/2024
-- [x] Add Architecture diagram - 16/Oct/2024
-- [x] Skeleton CRUD API - 17/Oct/2024
-- [x] Spring JPA Data - 18/Oct/2024
-- [x] CRUD API | Part 1 - 19/Oct/2024
-- [x] CRUD API | Part 2: Updated delete method CRUD function - 20/Oct/2024
-- [x] CRUD API | Part 3: Updated put method CRUD function - 21/Oct/2024
-- [x] Business Logic Service | Part 1 - 22/10/2024
-- [x] Business Logic Service | Part 2 - 23/10/2024
-- [x] Business Logic Service | Part 3 - 24/10/2024
+- [x] Simple Hello World API
+- [x] Add GitHub Actions for build and test
+- [x] Add Architecture diagram
+- [x] Skeleton CRUD API
+- [x] Spring JPA Data
+- [x] CRUD API
+- [x] Business Logic Service
+- [ ] Improve Logic Service
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
 - [ ] Add API Gateway

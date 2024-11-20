@@ -5,9 +5,9 @@ import java.util.UUID;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import io.d4rkr0n1n.sample.model.Notes;
+import io.d4rkr0n1n.sample.model.Note;
 
 @Repository
-public interface NotesRepository extends CrudRepository<Notes, UUID> {
+public interface NotesRepository extends CrudRepository<Note, UUID> {
 
 }
