@@ -34,11 +34,12 @@ flowchart LR
 - [x] CRUD API
 - [x] Business Logic Service
 - [x] Add ResponseEntity
+- [x] Add Postman API Collection
+- [x] Refactor PutMapping Function
+- [x] Refactor Service Class
 
 ### Work in Progress
-- [ ] Refactor PutMapping Function
-- [ ] Refactor Service Class
-- [ ] Add Postman API Collection
+- [ ] Thymeleaf Frontened
 
 ## Future Plans
 ### Prerequisites

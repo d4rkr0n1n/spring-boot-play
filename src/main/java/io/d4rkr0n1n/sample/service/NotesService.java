@@ -30,12 +30,9 @@ public class NotesService {
   public ResponseEntity<List<Note>> retrieveAllNotes() {
     List<Note> notes = (ArrayList<Note>) notesRepository.findAll();
     for (Note x : notes) {
-      log.info(Long.toString(x.getTimestamp().getTime()));
       Date date = new Date(x.getTimestamp().getTime());
-      log.info(date.toString());
       Time time = new Time(x.getTimestamp().getTime());
-      log.info(Long.toString(x.getTimestamp().getTime()));
-      log.info(time.toString());
+      log.info("["+"Timestamp: " + x.getTimestamp().toString() + " | " + "Date: " + date.toString() + " | " + "Time: " + time.toString() + "]");
     }
     return ResponseHelper.ok(notes);
   }
@@ -57,14 +54,14 @@ public class NotesService {
     }
   }
 
-  public ResponseEntity<Note> updateNote(UUID id, String updatedName) {
+  public ResponseEntity<Note> updateNote(UUID id, String updatedContents) {
 
     Optional<Note> noteId = findNoteById(id);
     ResponseEntity<Note> status = ResponseHelper.notFound();
 
     if (noteId.isPresent()) {
       Note note = noteId.get();
-      note.setName(updatedName);
+      note.setContents(updatedContents);
       saveNote(note);
       status = ResponseHelper.ok(note);
     }

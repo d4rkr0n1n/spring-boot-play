@@ -41,8 +41,8 @@ public class NotesController {
     }
 
     @PutMapping("/note")
-    public ResponseEntity<Note> put(@RequestParam UUID id, @RequestParam String updatedName) {
-        return notesService.updateNote(id, updatedName);
+    public ResponseEntity<Note> put(@RequestParam UUID id, @RequestParam String updatedContents) {
+        return notesService.updateNote(id, updatedContents);
     }
 
     @DeleteMapping("/note")
