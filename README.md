@@ -38,6 +38,7 @@ flowchart LR
 ### Work in Progress
 - [ ] Refactor PutMapping Function
 - [ ] Refactor Service Class
+- [ ] Add Postman API Collection
 
 ## Future Plans
 ### Prerequisites
