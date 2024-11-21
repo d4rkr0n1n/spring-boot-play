@@ -90,7 +90,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/v1/note?id=774c8ada-35a8-442a-aeb2-1d6eea1c15af&updatedName=new_update",
+					"raw": "http://127.0.0.1:8080/api/v1/note?id=774c8ada-35a8-442a-aeb2-1d6eea1c15af&updatedContents=new_update",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -110,7 +110,7 @@
 							"value": "774c8ada-35a8-442a-aeb2-1d6eea1c15af"
 						},
 						{
-							"key": "updatedName",
+							"key": "updatedContents",
 							"value": "new_update"
 						}
 					]
