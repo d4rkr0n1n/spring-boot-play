@@ -25,20 +25,28 @@ flowchart LR
     API <--> DB
     World["World"] <--> APIGateway
 ```
+### Done
+- [x] Simple Hello World API
+- [x] Add GitHub Actions for build and test
+- [x] Add Architecture diagram
+- [x] Skeleton CRUD API
+- [x] Spring JPA Data
+- [x] CRUD API
+- [x] Business Logic Service
+- [x] Add ResponseEntity
+- [x] Add Postman API Collection
+- [x] Refactor PutMapping Function
+- [x] Refactor Service Class
 
-## Creating Microservices Skeleton
-- [x] Simple Hello World API - 15/Oct/2024
-- [x] Add GitHub Actions for build and test - 15/Oct/2024
-- [x] Add Architecture diagram - 16/Oct/2024
-- [x] Skeleton CRUD API - 17/Oct/2024
-- [x] Spring JPA Data - 18/Oct/2024
-- [x] CRUD API | Part 1 - 19/Oct/2024
-- [ ] CRUD API
+### Work in Progress
+- [ ] Thymeleaf Frontened
+
+## Future Plans
+### Prerequisites
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
 - [ ] Add API Gateway
 - [ ] Add Frontend Microservice
-
-## Dockerizing the application
+### Dockerizing the application
 - [ ] Create dockerfile for each service
 - [ ] Create docker compose for microservices stack
