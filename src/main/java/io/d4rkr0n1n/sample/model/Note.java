@@ -1,5 +1,6 @@
-package io.d4rkr0n1n.sample;
+package io.d4rkr0n1n.sample.model;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
@@ -14,8 +15,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Notes {
+public class Note {
   @Id UUID id;
   String name;
-
+  String contents;
+  Timestamp timestamp;
 }
