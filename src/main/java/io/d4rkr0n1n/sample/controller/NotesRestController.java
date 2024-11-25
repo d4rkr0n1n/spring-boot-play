@@ -17,11 +17,11 @@ import io.d4rkr0n1n.sample.service.NotesService;
 
 @RestController
 @RequestMapping("/api/v1")
-public class NotesController {
+public class NotesRestController {
 
     private final NotesService notesService;
 
-    public NotesController(NotesService notesService) {
+    public NotesRestController(NotesService notesService) {
         this.notesService = notesService;
     }
 
