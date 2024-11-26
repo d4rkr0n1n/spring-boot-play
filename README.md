@@ -1,6 +1,7 @@
 # The Spring Boot Microservices Project
 
 ## Architecture
+
 ```mermaid
 flowchart LR
  subgraph DBSvc["DB Service"]
@@ -25,7 +26,9 @@ flowchart LR
     API <--> DB
     World["World"] <--> APIGateway
 ```
+
 ### Done
+
 - [x] Simple Hello World API
 - [x] Add GitHub Actions for build and test
 - [x] Add Architecture diagram
@@ -39,14 +42,20 @@ flowchart LR
 - [x] Refactor Service Class
 
 ### Work in Progress
+
 - [ ] Thymeleaf Frontened
+- [ ] Response Entity Refactoring
 
 ## Future Plans
+
 ### Prerequisites
+
 - [ ] Improve Architecture Diagram
 - [ ] Spring Data Rest for DB
 - [ ] Add API Gateway
 - [ ] Add Frontend Microservice
+
 ### Dockerizing the application
+
 - [ ] Create dockerfile for each service
 - [ ] Create docker compose for microservices stack

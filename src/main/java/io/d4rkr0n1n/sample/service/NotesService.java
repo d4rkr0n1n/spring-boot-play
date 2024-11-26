@@ -26,7 +26,10 @@ public class NotesService {
   public NotesService(NotesRepository sampleRepository) {
     this.notesRepository = sampleRepository;
   }
-
+ public Long checkDB(){
+  
+  return notesRepository.count();
+ }
   public ResponseEntity<List<Note>> retrieveAllNotes() {
     List<Note> notes = (ArrayList<Note>) notesRepository.findAll();
     for (Note x : notes) {
@@ -35,6 +38,16 @@ public class NotesService {
       log.info("["+"Timestamp: " + x.getTimestamp().toString() + " | " + "Date: " + date.toString() + " | " + "Time: " + time.toString() + "]");
     }
     return ResponseHelper.ok(notes);
+  }
+
+  public List<Note> retrieveAllNotesList() {
+    List<Note> notes = (ArrayList<Note>) notesRepository.findAll();
+    for (Note x : notes) {
+      Date date = new Date(x.getTimestamp().getTime());
+      Time time = new Time(x.getTimestamp().getTime());
+      log.info("["+"Timestamp: " + x.getTimestamp().toString() + " | " + "Date: " + date.toString() + " | " + "Time: " + time.toString() + "]");
+    }
+    return notes;
   }
 
   public ResponseEntity<Note> createNotes() {
