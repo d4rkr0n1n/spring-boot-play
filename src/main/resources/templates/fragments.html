@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Fragments</title>
+</head>
+
+<body>
+  <div th:fragment="myDiv" id="myDiv">
+    <div th:each="note : ${notes}" class="pt-1">
+      <div class="d-flex justify-content-center pb-1">
+        <div class="input-group" style="max-width: 70%;">
+          <input type="text" class="form-control" th:placeholder="'Note ' + ${note.id}" th:value="${note.contents}">
+          <button class="btn btn-primary" type="button" onclick="alert('Note updated! 👍')">Update</button>
+          <button class="btn btn-danger" type="button">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

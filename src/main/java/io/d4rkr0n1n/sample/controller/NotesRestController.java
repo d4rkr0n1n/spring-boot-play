@@ -13,41 +13,41 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.d4rkr0n1n.sample.model.Note;
-import io.d4rkr0n1n.sample.service.NotesService;
+import io.d4rkr0n1n.sample.service.NotesResponseService;
 
 @RestController
 @RequestMapping("/api/v1")
 public class NotesRestController {
 
-    private final NotesService notesService;
+    private final NotesResponseService notesResponseService;
 
-    public NotesRestController(NotesService notesService) {
-        this.notesService = notesService;
+    public NotesRestController(NotesResponseService notesResponseService) {
+        this.notesResponseService = notesResponseService;
     }
 
     @GetMapping("/notes")
     public ResponseEntity<List<Note>> getAllNotes() {
-        return notesService.retrieveAllNotes();
+        return notesResponseService.retrieveAllNotes();
     }
 
     @PostMapping("/note")
     public ResponseEntity<Note> post() {
-        return notesService.createNotes();
+        return notesResponseService.createNotes();
     }
 
     @GetMapping("/note")
     public ResponseEntity<Note> getNote(@RequestParam UUID id) {
-        return notesService.retrieveNote(id);
+        return notesResponseService.retrieveNote(id);
     }
 
     @PutMapping("/note")
     public ResponseEntity<Note> put(@RequestParam UUID id, @RequestParam String updatedContents) {
-        return notesService.updateNote(id, updatedContents);
+        return notesResponseService.updateNote(id, updatedContents);
     }
 
     @DeleteMapping("/note")
     public ResponseEntity<Note> delete(@RequestParam UUID id) {
-        return notesService.deleteNote(id);
+        return notesResponseService.deleteNote(id);
     }
 
 }
