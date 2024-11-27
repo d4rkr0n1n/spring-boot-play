@@ -40,11 +40,11 @@ flowchart LR
 - [x] Add Postman API Collection
 - [x] Refactor PutMapping Function
 - [x] Refactor Service Class
+- [x] Response Entity Refactoring
 
 ### Work in Progress
 
 - [ ] Thymeleaf Frontened
-- [ ] Response Entity Refactoring
 
 ## Future Plans
 
