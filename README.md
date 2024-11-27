@@ -41,10 +41,12 @@ flowchart LR
 - [x] Refactor PutMapping Function
 - [x] Refactor Service Class
 - [x] Response Entity Refactoring
+- [x] Thymeleaf Frontened: Initial Setup
 
 ### Work in Progress
 
-- [ ] Thymeleaf Frontened
+- [ ] Thymeleaf Frontened: Create
+- [ ] Thymeleaf Frontened: Update & Delete
 
 ## Future Plans
 
