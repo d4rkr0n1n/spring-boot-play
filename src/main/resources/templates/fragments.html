@@ -12,7 +12,7 @@
         <div class="input-group" style="max-width: 70%;">
           <input type="text" class="form-control" th:placeholder="'Note ' + ${note.id}" th:value="${note.contents}">
           <button class="btn btn-primary" type="button" onclick="alert('Note updated! 👍')">Update</button>
-          <button class="btn btn-danger" type="button">Delete</button>
+          <button class="btn btn-danger" type="button" th:attr="onclick=|delDiv('${note.id}')|">Delete</button>
         </div>
       </div>
     </div>

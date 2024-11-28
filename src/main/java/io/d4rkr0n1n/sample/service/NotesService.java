@@ -47,6 +47,12 @@ public class NotesService {
     return saveNote(notes);
   }
 
+  public Note createNotesC(String contents) {
+    Timestamp timestamp = TimeUtils.getCurrentTime();
+    Note notes = new Note(UUID.randomUUID(), "Note_" + timestamp, contents, timestamp);
+    return saveNote(notes);
+  }
+
   public Note retrieveNote(UUID id) {
     return findNoteById(id);
   }

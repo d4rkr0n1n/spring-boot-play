@@ -42,11 +42,14 @@ flowchart LR
 - [x] Refactor Service Class
 - [x] Response Entity Refactoring
 - [x] Thymeleaf Frontened: Initial Setup
+- [x] Thymeleaf Frontened: Create
+- [x] Thymeleaf Frontened: Delete
 
 ### Work in Progress
 
-- [ ] Thymeleaf Frontened: Create
-- [ ] Thymeleaf Frontened: Update & Delete
+- [ ] Change naming conventions
+- [ ] Order the notes list in descending order after refresh
+- [ ] Thymeleaf Frontened: Update
 
 ## Future Plans
 
