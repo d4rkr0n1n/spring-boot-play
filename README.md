@@ -47,9 +47,9 @@ flowchart LR
 
 ### Work in Progress
 
-- [ ] Change naming conventions
-- [ ] Order the notes list in descending order after refresh
 - [ ] Thymeleaf Frontened: Update
+- [ ] Order the notes list in descending order after refresh
+- [ ] Change naming conventions
 
 ## Future Plans
 
