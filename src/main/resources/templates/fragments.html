@@ -10,8 +10,10 @@
     <div th:each="note : ${notes}" class="pt-1">
       <div class="d-flex justify-content-center pb-1">
         <div class="input-group" style="max-width: 70%;">
-          <input type="text" class="form-control" th:placeholder="'Note ' + ${note.id}" th:value="${note.contents}">
-          <button class="btn btn-primary" type="button" onclick="alert('Note updated! 👍')">Update</button>
+          <input type="text" class="form-control" th:id="${note.id}" th:placeholder="'Note ' + ${note.id}"
+            th:value="${note.contents}">
+          <button class="btn btn-primary" type="button"
+            th:attr="onclick=|updDiv('${note.id}',$('#${note.id}').val())|">Update</button>
           <button class="btn btn-danger" type="button" th:attr="onclick=|delDiv('${note.id}')|">Delete</button>
         </div>
       </div>

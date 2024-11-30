@@ -44,12 +44,12 @@ flowchart LR
 - [x] Thymeleaf Frontened: Initial Setup
 - [x] Thymeleaf Frontened: Create
 - [x] Thymeleaf Frontened: Delete
+- [x] Thymeleaf Frontened: Update
 
 ### Work in Progress
 
-- [ ] Thymeleaf Frontened: Update
-- [ ] Order the notes list in descending order after refresh
 - [ ] Change naming conventions
+- [ ] Refactor HTML templates
 
 ## Future Plans
 

@@ -32,20 +32,11 @@
     <hr>
 
   </div>
-  <div id="myDiv">
-    <div th:each="note : ${notes}" class="pt-1">
-      <div class="d-flex justify-content-center pb-1">
-        <div class="input-group" style="max-width: 70%;">
-          <input type="text" class="form-control" th:placeholder="'Note ' + ${note.id}" th:value="${note.contents}">
-          <button class="btn btn-primary" type="button" onclick="alert('Note updated! 👍')">Update</button>
-          <button class="btn btn-danger" type="button" th:attr="onclick=|delDiv('${note.id}')|">Delete</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div th:replace="fragments :: myDiv"></div>
 
   <script th:inline="javascript">
     function updateDiv(contents) {
+      alert("Note added successfully!");
       $.ajax({
         url: "/refresh1",
         type: "GET",
@@ -57,10 +48,22 @@
       });
     }
     function delDiv(noteId) {
+      alert("Note deleted successfully!");
       $.ajax({
         url: "/refreshdel",
         type: "DELETE",
         data: { id: noteId },
+        success: function (response) {
+          $("#myDiv").replaceWith(response);
+        }
+      });
+    }
+    function updDiv(noteId, contents) {
+      alert("Note updated successfully!");
+      $.ajax({
+        url: "/refreshupd",
+        type: "PUT",
+        data: { id: noteId, contents: contents },
         success: function (response) {
           $("#myDiv").replaceWith(response);
         }
