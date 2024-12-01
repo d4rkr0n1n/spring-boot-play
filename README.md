@@ -46,10 +46,11 @@ flowchart LR
 - [x] Thymeleaf Frontened: Delete
 - [x] Thymeleaf Frontened: Update
 - [x] Refactor HTML templates
+- [x] Change naming conventions
 
 ### Work in Progress
 
-- [ ] Change naming conventions
+- [ ] Decoupling Backend and Frontend
 
 ## Future Plans
 

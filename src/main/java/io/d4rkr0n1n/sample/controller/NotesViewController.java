@@ -31,19 +31,19 @@ public class NotesViewController {
     return "index";
   }
 
-  @GetMapping("/refresh1")
+  @GetMapping("/createNote")
   public String addNote(Model model, @RequestParam String contents) {
     notesService.createNotesC(contents);
     return refreshNotesTable(model);
   }
 
-  @DeleteMapping("/refreshdel")
+  @DeleteMapping("/deleteNote")
   public String deleteNote(Model model, @RequestParam UUID id) {
     notesService.deleteNote(id);
     return refreshNotesTable(model);
   }
 
-  @PutMapping("/refreshupd")
+  @PutMapping("/updateNote")
   public String deleteNote(Model model, @RequestParam UUID id,@RequestParam String contents) {
     notesService.updateNote(id,contents);
     return refreshNotesTable(model);
@@ -51,6 +51,6 @@ public class NotesViewController {
 
   private String refreshNotesTable(Model model) {
     model.addAttribute("notes", notesService.retrieveAllNotes());
-    return "fragments/myDiv :: myDiv";
+    return "fragments/notesList :: notes";
   }
 }

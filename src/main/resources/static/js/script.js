@@ -1,11 +1,11 @@
 function updateDiv(contents) {
   alert("Note added successfully!");
   $.ajax({
-    url: "/refresh1",
+    url: "/createNote",
     type: "GET",
     data: { contents: contents },
     success: function (response) {
-      $("#myDiv").replaceWith(response);
+      $("#notes").replaceWith(response);
       $('#newNoteInput').val('');
     }
   });
@@ -13,22 +13,22 @@ function updateDiv(contents) {
 function delDiv(noteId) {
   alert("Note deleted successfully!");
   $.ajax({
-    url: "/refreshdel",
+    url: "/deleteNote",
     type: "DELETE",
     data: { id: noteId },
     success: function (response) {
-      $("#myDiv").replaceWith(response);
+      $("#notes").replaceWith(response);
     }
   });
 }
 function updDiv(noteId, contents) {
   alert("Note updated successfully!");
   $.ajax({
-    url: "/refreshupd",
+    url: "/updateNote",
     type: "PUT",
     data: { id: noteId, contents: contents },
     success: function (response) {
-      $("#myDiv").replaceWith(response);
+      $("#notes").replaceWith(response);
     }
   });
 }
