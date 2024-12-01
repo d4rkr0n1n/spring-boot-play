@@ -45,11 +45,11 @@ flowchart LR
 - [x] Thymeleaf Frontened: Create
 - [x] Thymeleaf Frontened: Delete
 - [x] Thymeleaf Frontened: Update
+- [x] Refactor HTML templates
 
 ### Work in Progress
 
 - [ ] Change naming conventions
-- [ ] Refactor HTML templates
 
 ## Future Plans
 

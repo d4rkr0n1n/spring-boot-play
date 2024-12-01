@@ -51,6 +51,6 @@ public class NotesViewController {
 
   private String refreshNotesTable(Model model) {
     model.addAttribute("notes", notesService.retrieveAllNotes());
-    return "fragments :: myDiv";
+    return "fragments/myDiv :: myDiv";
   }
 }
