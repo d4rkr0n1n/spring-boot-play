@@ -47,10 +47,11 @@ flowchart LR
 - [x] Thymeleaf Frontened: Update
 - [x] Refactor HTML templates
 - [x] Change naming conventions
+- [x] Separate folder for frontend to be created
 
 ### Work in Progress
 
-- [ ] Decoupling Backend and Frontend
+- [ ] Separate folder for backend to be created
 
 ## Future Plans
 
