@@ -50,10 +50,6 @@ flowchart LR
 - [x] Separate folder for frontend to be created
 - [x] Separate folder for backend to be created
 
-### Work in Progress
-
-- [ ] Connect backend with frontend
-
 ## Future Plans
 
 ### Prerequisites
