@@ -27,29 +27,6 @@ flowchart LR
     World["World"] <--> APIGateway
 ```
 
-### Done
-
-- [x] Simple Hello World API
-- [x] Add GitHub Actions for build and test
-- [x] Add Architecture diagram
-- [x] Skeleton CRUD API
-- [x] Spring JPA Data
-- [x] CRUD API
-- [x] Business Logic Service
-- [x] Add ResponseEntity
-- [x] Add Postman API Collection
-- [x] Refactor PutMapping Function
-- [x] Refactor Service Class
-- [x] Response Entity Refactoring
-- [x] Thymeleaf Frontened: Initial Setup
-- [x] Thymeleaf Frontened: Create
-- [x] Thymeleaf Frontened: Delete
-- [x] Thymeleaf Frontened: Update
-- [x] Refactor HTML templates
-- [x] Change naming conventions
-- [x] Separate folder for frontend to be created
-- [x] Separate folder for backend to be created
-
 ## Future Plans
 
 ### Prerequisites
