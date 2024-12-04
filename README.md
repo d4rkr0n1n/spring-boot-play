@@ -48,10 +48,11 @@ flowchart LR
 - [x] Refactor HTML templates
 - [x] Change naming conventions
 - [x] Separate folder for frontend to be created
+- [x] Separate folder for backend to be created
 
 ### Work in Progress
 
-- [ ] Separate folder for backend to be created
+- [ ] Connect backend with frontend
 
 ## Future Plans
 
