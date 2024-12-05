@@ -14,3 +14,5 @@ spring:
     generate-ddl: true
     hibernate.ddl-auto: update
     show-sql: true
+server:
+  port: 8081
