@@ -9,19 +9,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import io.d4rkr0n1n.sample.clients.BackendClient;
 import io.d4rkr0n1n.sample.service.NotesService;
+import lombok.extern.java.Log;
 
 @Controller
+@Log
 public class NotesViewController {
 
   private final NotesService notesService;
+  private final BackendClient backendClient;
 
-  public NotesViewController(NotesService notesService) {
+  public NotesViewController(NotesService notesService,BackendClient backendClient) {
     this.notesService = notesService;
+    this.backendClient = backendClient;
+
   }
 
   @GetMapping("/")
   public String home(Model model) {
+    log.info(backendClient.getNotes().toString());
     if (notesService.checkDB() == 0) {
       notesService.createNotes();
       notesService.createNotes();
