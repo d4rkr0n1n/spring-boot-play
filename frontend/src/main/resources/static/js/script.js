@@ -2,7 +2,7 @@ function updateDiv(contents) {
   alert("Note added successfully!");
   $.ajax({
     url: "/createNote",
-    type: "GET",
+    type: "POST",
     data: { contents: contents },
     success: function (response) {
       $("#notes").replaceWith(response);

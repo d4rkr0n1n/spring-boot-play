@@ -22,7 +22,11 @@ public class NotesResponseService {
     return ResponseHelper.ok(notesService.retrieveAllNotes());
   }
 
-  public ResponseEntity<Note> createNotes() {
+  public ResponseEntity<Note> createNotes(String contents) {
+    return ResponseHelper.created(notesService.createNotesC(contents));
+  }
+
+  public ResponseEntity<Note> createNotesRandom() {
     return ResponseHelper.created(notesService.createNotes());
   }
 
