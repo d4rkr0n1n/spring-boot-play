@@ -31,6 +31,9 @@ public class NotesService {
   }
 
   public List<Note> retrieveAllNotes() {
+    if(checkDB() == 0) {
+      createNotes();
+    }
     List<Note> notes = (ArrayList<Note>) notesRepository.findAll();
     for (Note x : notes) {
       Date date = new Date(x.getTimestamp().getTime());

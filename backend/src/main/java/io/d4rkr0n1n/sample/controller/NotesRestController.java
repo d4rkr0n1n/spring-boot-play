@@ -30,9 +30,14 @@ public class NotesRestController {
         return notesResponseService.retrieveAllNotes();
     }
 
-    @PostMapping("/note")
+    @PostMapping("/note/random")
     public ResponseEntity<Note> post() {
-        return notesResponseService.createNotes();
+        return notesResponseService.createNotesRandom();
+    }
+
+    @PostMapping("/note")
+    public ResponseEntity<Note> post(@RequestParam String contents) {
+        return notesResponseService.createNotes(contents);
     }
 
     @GetMapping("/note")
