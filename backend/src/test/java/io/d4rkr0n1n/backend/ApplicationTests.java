@@ -1,13 +1,14 @@
-package io.d4rkr0n1n.sample;
+package io.d4rkr0n1n.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SampleApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
-	}
+   // This method is used to check if the Spring application context loads successfully.
+ }
 
 }
