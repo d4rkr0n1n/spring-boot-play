@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample.service;
+package io.d4rkr0n1n.backend.service;
 
 import java.sql.Date;
 import java.sql.Time;
@@ -10,9 +10,9 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import io.d4rkr0n1n.sample.model.Note;
-import io.d4rkr0n1n.sample.repository.NotesRepository;
-import io.d4rkr0n1n.sample.utils.TimeUtils;
+import io.d4rkr0n1n.backend.model.Note;
+import io.d4rkr0n1n.backend.repository.NotesRepository;
+import io.d4rkr0n1n.backend.utils.TimeUtils;
 import lombok.extern.java.Log;
 
 @Service

@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Frontend",
+      "request": "launch",
+      "mainClass": "io.d4rkr0n1n.frontend.Application",
+      "projectName": "frontend-svc"
+    },
+    {
+      "type": "java",
+      "name": "Backend",
+      "request": "launch",
+      "mainClass": "io.d4rkr0n1n.backend.Application",
+      "projectName": "backend-svc"
+    }
+  ]
+}

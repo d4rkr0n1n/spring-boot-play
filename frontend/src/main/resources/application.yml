@@ -1,18 +1,5 @@
 spring:
   application:
-    name: sample
-  h2:
-    console:
-      enabled: true
-  datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-    generate-ddl: true
-    hibernate.ddl-auto: update
-    show-sql: true
+    name: frontend
 server:
   port: 8081

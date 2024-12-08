@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample.helper;
+package io.d4rkr0n1n.backend.helper;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

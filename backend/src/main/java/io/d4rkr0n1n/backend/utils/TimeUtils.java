@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample.utils;
+package io.d4rkr0n1n.backend.utils;
 
 import java.sql.Timestamp;
 

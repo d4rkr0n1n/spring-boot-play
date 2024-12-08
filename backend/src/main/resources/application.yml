@@ -1,6 +1,6 @@
 spring:
   application:
-    name: sample
+    name: backend
   h2:
     console:
       enabled: true

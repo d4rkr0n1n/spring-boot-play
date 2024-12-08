@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample.model;
+package io.d4rkr0n1n.backend.model;
 
 import java.sql.Timestamp;
 import java.util.UUID;
