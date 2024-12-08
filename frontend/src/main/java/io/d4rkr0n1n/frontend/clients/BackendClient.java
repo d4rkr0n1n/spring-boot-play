@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample.clients;
+package io.d4rkr0n1n.frontend.clients;
 
 import java.util.List;
 import java.util.UUID;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import io.d4rkr0n1n.sample.model.Note;
+import io.d4rkr0n1n.frontend.model.Note;
 
 @FeignClient(name = "backend", url = "http://localhost:8080/api/v1")
 public interface BackendClient {

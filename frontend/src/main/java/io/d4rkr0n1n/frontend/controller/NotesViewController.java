@@ -1,4 +1,4 @@
-package io.d4rkr0n1n.sample.controller;
+package io.d4rkr0n1n.frontend.controller;
 
 import java.util.UUID;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import io.d4rkr0n1n.sample.clients.BackendClient;
+import io.d4rkr0n1n.frontend.clients.BackendClient;
 import lombok.extern.java.Log;
 
 @Controller
