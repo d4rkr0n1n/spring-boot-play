@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Gateway",
+      "request": "launch",
+      "mainClass": "io.d4rkr0n1n.gateway.Application",
+      "projectName": "api-gateway"
+    },
+    {
+      "type": "java",
       "name": "Frontend",
       "request": "launch",
       "mainClass": "io.d4rkr0n1n.frontend.Application",
@@ -17,10 +24,10 @@
     },
     {
       "type": "java",
-      "name": "Gateway",
+      "name": "Database",
       "request": "launch",
-      "mainClass": "io.d4rkr0n1n.gateway.Application",
-      "projectName": "api-gateway",
+      "mainClass": "io.d4rkr0n1n.database.Application",
+      "projectName": "database"
     }
   ]
 }

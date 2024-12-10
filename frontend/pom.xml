@@ -11,7 +11,7 @@
 	<groupId>io.d4rkr0n1n</groupId>
 	<artifactId>frontend-svc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Frontend Microservice</name>
+	<name>Frontend</name>
 	<description>Microservices Project</description>
 	<url/>
 	<licenses>
