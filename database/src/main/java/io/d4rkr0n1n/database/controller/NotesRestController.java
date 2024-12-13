@@ -16,6 +16,7 @@ import io.d4rkr0n1n.database.model.Note;
 import io.d4rkr0n1n.database.service.NotesResponseService;
 
 @RestController
+
 @RequestMapping("/api/v1")
 public class NotesRestController {
 
