@@ -25,33 +25,28 @@ public class NotesRestController {
         this.notesResponseService = notesResponseService;
     }
 
-    @GetMapping("/notes")
-    public ResponseEntity<List<Note>> getAllNotes() {
-        return notesResponseService.retrieveAllNotes();
-    }
-
-    @PostMapping("/note/random")
-    public ResponseEntity<Note> post() {
-        return notesResponseService.createNotesRandom();
-    }
-
     @PostMapping("/note")
-    public ResponseEntity<Note> post(@RequestParam String contents) {
+    public ResponseEntity<Note> createNote(@RequestParam String contents) {
         return notesResponseService.createNotes(contents);
     }
 
+    @GetMapping("/notes")
+    public ResponseEntity<List<Note>> retrieveNotes() {
+        return notesResponseService.retrieveAllNotes();
+    }    
+
     @GetMapping("/note")
-    public ResponseEntity<Note> getNote(@RequestParam UUID id) {
+    public ResponseEntity<Note> retrieveNote(@RequestParam UUID id) {
         return notesResponseService.retrieveNote(id);
-    }
+    }    
 
     @PutMapping("/note")
-    public ResponseEntity<Note> put(@RequestParam UUID id, @RequestParam String updatedContents) {
+    public ResponseEntity<Note> updateNote(@RequestParam UUID id, @RequestParam String updatedContents) {
         return notesResponseService.updateNote(id, updatedContents);
     }
 
     @DeleteMapping("/note")
-    public ResponseEntity<Note> delete(@RequestParam UUID id) {
+    public ResponseEntity<Note> deleteNote(@RequestParam UUID id) {
         return notesResponseService.deleteNote(id);
     }
 
