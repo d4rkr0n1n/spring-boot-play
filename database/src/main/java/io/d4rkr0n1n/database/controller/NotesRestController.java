@@ -26,29 +26,29 @@ public class NotesRestController {
         this.notesResponseService = notesResponseService;
     }
 
-    @PostMapping("/note")
-    public ResponseEntity<Note> createNote(@RequestParam String contents) {
-        return notesResponseService.createNotes(contents);
-    }
-
-    @GetMapping("/notes")
-    public ResponseEntity<List<Note>> retrieveNotes() {
+    @GetMapping("/retrieveAllNotes")
+    public ResponseEntity<List<Note>> retrieveAllNotes() {
         return notesResponseService.retrieveAllNotes();
     }    
-
-    @GetMapping("/note")
+    
+    @GetMapping("/retrieveNote")
     public ResponseEntity<Note> retrieveNote(@RequestParam UUID id) {
         return notesResponseService.retrieveNote(id);
     }    
 
-    @PutMapping("/note")
-    public ResponseEntity<Note> updateNote(@RequestParam UUID id, @RequestParam String updatedContents) {
-        return notesResponseService.updateNote(id, updatedContents);
+    @PostMapping("/saveNote")
+    public ResponseEntity<Note> saveNote(@RequestParam Note note) {
+        return notesResponseService.saveNote(note);
     }
 
-    @DeleteMapping("/note")
-    public ResponseEntity<Note> deleteNote(@RequestParam UUID id) {
-        return notesResponseService.deleteNote(id);
+    @PutMapping("/countNotes")
+    public ResponseEntity<Long> countNotes() {
+        return notesResponseService.countNotes();
+    }
+
+    @DeleteMapping("/deleteNote")
+    public ResponseEntity<String> deleteNote(@RequestParam Note note) {
+        return notesResponseService.deleteNote(note);
     }
 
 }
