@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,17 +37,17 @@ public class NotesRestController {
     }    
 
     @PostMapping("/saveNote")
-    public ResponseEntity<Note> saveNote(@RequestParam Note note) {
+    public ResponseEntity<Note> saveNote(@RequestBody Note note) {
         return notesResponseService.saveNote(note);
     }
 
-    @PutMapping("/countNotes")
+    @GetMapping("/countNotes")
     public ResponseEntity<Long> countNotes() {
         return notesResponseService.countNotes();
     }
 
     @DeleteMapping("/deleteNote")
-    public ResponseEntity<String> deleteNote(@RequestParam Note note) {
+    public ResponseEntity<String> deleteNote(@RequestBody Note note) {
         return notesResponseService.deleteNote(note);
     }
 
