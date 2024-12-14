@@ -69,7 +69,7 @@ public class NotesService {
   public Note deleteNote(UUID id) {
     Note note = findNoteById(id);
     notesRepository.delete(note);
-    return "Note successfully deleted";
+    return null;
   }
 
   private Note saveNote(Note note) {
