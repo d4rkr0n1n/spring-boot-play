@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Gateway",
+      "request": "launch",
+      "mainClass": "io.d4rkr0n1n.gateway.Application",
+      "projectName": "api-gateway"
+    },
+    {
+      "type": "java",
+      "name": "Frontend",
+      "request": "launch",
+      "mainClass": "io.d4rkr0n1n.frontend.Application",
+      "projectName": "frontend-svc"
+    },
+    {
+      "type": "java",
+      "name": "Backend",
+      "request": "launch",
+      "mainClass": "io.d4rkr0n1n.backend.Application",
+      "projectName": "backend-svc"
+    },
+    {
+      "type": "java",
+      "name": "Database",
+      "request": "launch",
+      "mainClass": "io.d4rkr0n1n.database.Application",
+      "projectName": "database"
+    }
+  ]
+}
