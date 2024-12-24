@@ -4,6 +4,18 @@ updates:
     directory: "/backend/"
     schedule:
       interval: "weekly"
+  - package-ecosystem: "maven"
+    directory: "/database/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "maven"
+    directory: "/frontend/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "maven"
+    directory: "/gateway/"
+    schedule:
+      interval: "weekly"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
