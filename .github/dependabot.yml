@@ -1,11 +1,23 @@
 version: 2
 updates:
   - package-ecosystem: "maven"
-    directory: "/"
+    directory: "/backend/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "maven"
+    directory: "/database/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "maven"
+    directory: "/frontend/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "maven"
+    directory: "/gateway/"
     schedule:
       interval: "weekly"
   - package-ecosystem: "github-actions"
-    directory: "/backend"
+    directory: "/"
     schedule:
       interval: "weekly"
 
