@@ -1,6 +1,7 @@
 package io.d4rkr0n1n.database.controller;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
@@ -32,7 +33,7 @@ public class NotesRestController {
     }    
     
     @GetMapping("/retrieveNote")
-    public ResponseEntity<Note> retrieveNote(@RequestParam UUID id) {
+    public ResponseEntity<Optional<Note>> retrieveNote(@RequestParam UUID id) {
         return notesResponseService.retrieveNote(id);
     }    
 

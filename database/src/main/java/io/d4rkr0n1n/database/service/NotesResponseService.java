@@ -1,6 +1,7 @@
 package io.d4rkr0n1n.database.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
@@ -22,12 +23,8 @@ public class NotesResponseService {
     return ResponseHelper.ok(notesService.retrieveAllNotes());
   }
 
-  public ResponseEntity<Note> retrieveNote(UUID id) {
-    try {
-      return ResponseHelper.ok(notesService.retrieveNote(id));
-    } catch (Exception e) {
-      return ResponseHelper.notFound();
-    }
+  public ResponseEntity<Optional<Note>> retrieveNote(UUID id) {
+    return ResponseHelper.ok(notesService.retrieveNote(id));
   }
 
   public ResponseEntity<Note> saveNote(Note note) {

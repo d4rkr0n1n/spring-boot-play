@@ -2,7 +2,6 @@ package io.d4rkr0n1n.database.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -30,13 +29,8 @@ public class NotesService {
     return (ArrayList<Note>) notesRepository.findAll();
   }
 
-  public Note retrieveNote(UUID id) {
-    Optional<Note> note = notesRepository.findById(id);
-    if (note.isPresent()) {
-      return note.get();
-    } else{
-      throw new NoSuchElementException("Note with id " + id + " not found");
-    }
+  public Optional<Note> retrieveNote(UUID id) {
+    return notesRepository.findById(id);
   }
 
   public Note saveNote(Note note) {
