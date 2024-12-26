@@ -12,17 +12,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.d4rkr0n1n.backend.clients.DatabaseClient;
 import io.d4rkr0n1n.backend.model.Note;
 import io.d4rkr0n1n.backend.service.NotesResponseService;
+import io.d4rkr0n1n.backend.utils.TimeUtils;
 
 @RestController
 @RequestMapping("/api/v1")
 public class NotesRestController {
 
     private final NotesResponseService notesResponseService;
+    private final DatabaseClient databaseClient;
 
-    public NotesRestController(NotesResponseService notesResponseService) {
+    public NotesRestController(NotesResponseService notesResponseService, DatabaseClient databaseClient) {
         this.notesResponseService = notesResponseService;
+        this.databaseClient = databaseClient;
     }
 
     @GetMapping("/notes")
@@ -55,4 +59,14 @@ public class NotesRestController {
         return notesResponseService.deleteNote(id);
     }
 
+    @GetMapping("/retrieveAllNotes")
+    public List<Note> retrieveAllNotes() {
+        return databaseClient.retrieveAllNotes();
+    }
+
+    @PostMapping("/saveNote")
+    public Note saveNote() {
+        Note note = new Note(UUID.randomUUID(), "Note_" + TimeUtils.getCurrentTime(), "Random Note", TimeUtils.getCurrentTime());
+        return databaseClient.saveNote(note);
+    }
 }
