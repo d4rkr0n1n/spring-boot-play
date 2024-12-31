@@ -66,8 +66,8 @@ public class NotesRestController {
         return databaseClient.retrieveAllNotes();
     }
 
-    @GetMapping("/retrieveAllNotes")
-    public Optional<Note> retrieveAllNote(@RequestParam UUID id) {
+    @GetMapping("/retrieveNote")
+    public Optional<Note> retrieveNote(@RequestParam UUID id) {
         return databaseClient.retrieveNote(id);
     }
 
