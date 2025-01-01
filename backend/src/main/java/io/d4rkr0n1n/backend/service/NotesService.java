@@ -26,7 +26,6 @@ public class NotesService {
   }
 
   public Long checkDB() {
-
     return notesRepository.count();
   }
 
