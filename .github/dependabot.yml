@@ -4,21 +4,31 @@ updates:
     directory: "/backend/"
     schedule:
       interval: "weekly"
+      time: "02:00"
+      timezone: "Asia/Kolkata"
   - package-ecosystem: "maven"
     directory: "/database/"
     schedule:
       interval: "weekly"
+      time: "02:00"
+      timezone: "Asia/Kolkata"
   - package-ecosystem: "maven"
     directory: "/frontend/"
     schedule:
       interval: "weekly"
+      time: "02:00"
+      timezone: "Asia/Kolkata"
   - package-ecosystem: "maven"
     directory: "/gateway/"
     schedule:
       interval: "weekly"
+      time: "02:00"
+      timezone: "Asia/Kolkata"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+      time: "02:00"
+      timezone: "Asia/Kolkata"
 
       
